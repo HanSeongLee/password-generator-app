@@ -4,6 +4,7 @@ const Home: NextPage = () => {
   return (
       <>
         <main>
+            <h1>Password Generator</h1>
         </main>
       </>
   );
