@@ -1,0 +1,47 @@
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  background: #24232C;
+
+  .input {
+    flex: 1;
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #E6E5EA;
+    background: transparent;
+    border: 0;
+    padding: 17px 16px 15px;
+    outline: none;
+
+    &::placeholder {
+      color: rgba(230, 229, 234, 0.25);
+    }
+  }
+
+  .buttonContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15.5px;
+
+    .copyButton {
+      display: flex;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      .copyIcon {
+        width: 17.5px;
+        height: 20px;
+      }
+    }
+  }
+}
