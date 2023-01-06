@@ -1,0 +1,51 @@
+
+.rangeInputWrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    width: calc(100% - 2px);
+    height: 8px;
+    background: #18171F;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    width: calc(var(--progress-width) - 2px);
+    height: 8px;
+    background: #A4FFAF;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .input {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    z-index: 1;
+
+    &::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      box-shadow: none;
+      border: none;
+      background: transparent;
+    }
+
+    &::-webkit-slider-thumb {
+      width: 28px;
+      height: 28px;
+      -webkit-appearance: none;
+      background: #E6E5EA;
+      border-radius: 50%;
+    }
+  }
+}
