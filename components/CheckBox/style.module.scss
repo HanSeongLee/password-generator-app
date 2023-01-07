@@ -1,0 +1,24 @@
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #E6E5EA;
+
+  .input {
+    margin-right: 20px;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    border: 2px solid #E6E5EA;
+    cursor: pointer;
+
+    &:checked {
+      background: #A4FFAF url("/icons/icon-check.svg") no-repeat 50%;
+      border: none;
+    }
+  }
+}
