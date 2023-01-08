@@ -15,6 +15,8 @@ const RangeInput = React.forwardRef<HTMLInputElement, IProps>(({ value, max, cla
         >
             <input className={styles.input}
                    type={'range'}
+                   value={value}
+                   max={max}
                    {...props}
                    ref={ref}
             />
