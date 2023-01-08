@@ -1,0 +1,41 @@
+
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #817D92;
+  background: #18171F;
+  text-transform: uppercase;
+  padding: 14px 16px;
+
+  .value {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+    color: #E6E5EA;
+
+    .barContainer {
+      height: 100%;
+      display: flex;
+      gap: 8px;
+
+      .bar {
+        width: 10px;
+        height: 100%;
+        border: 2px solid #E6E5EA;
+
+        &.fill {
+          background: var(--bar-color);
+          border: none;
+        }
+      }
+    }
+  }
+}
