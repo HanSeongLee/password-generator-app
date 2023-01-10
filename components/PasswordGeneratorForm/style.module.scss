@@ -1,0 +1,52 @@
+
+.passwordGeneratorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: #24232C;
+  padding: 16px;
+
+  .rangeInputLabelWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+
+    .label {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      color: #E6E5EA;
+    }
+
+    .value {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: #A4FFAF;
+    }
+  }
+
+  .checkboxContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .generateButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    .rightArrowIcon {
+      height: 12px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
