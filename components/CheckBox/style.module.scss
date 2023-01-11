@@ -15,6 +15,11 @@
     -webkit-appearance: none;
     border: 2px solid #E6E5EA;
     cursor: pointer;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: #A4FFAF;
+    }
 
     &:checked {
       background: #A4FFAF url("/icons/icon-check.svg") no-repeat 50%;
