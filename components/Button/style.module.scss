@@ -11,6 +11,21 @@
   border: 0;
   padding: 0 24px;
   cursor: pointer;
+  transition: color 0.3s, background 0.3s, border 0.3s;
+
+  svg path {
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    color: #A4FFAF;
+    background: transparent;
+    border: 2px solid #A4FFAF;
+
+    svg path {
+      fill: #A4FFAF;
+    }
+  }
 
   @include media(">tablet") {
     min-height: 65px;
