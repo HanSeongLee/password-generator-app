@@ -46,6 +46,13 @@
       -webkit-appearance: none;
       background: #E6E5EA;
       border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s, border 0.15s;
+
+      &:hover {
+        background: #18171F;
+        border: 2px solid #A4FFAF;
+      }
     }
   }
 }
