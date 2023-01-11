@@ -1,0 +1,19 @@
+
+.main {
+  padding: 64px 0 63px;
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #817D92;
+    margin-bottom: 16px;
+  }
+
+  .passwordGeneratorContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
