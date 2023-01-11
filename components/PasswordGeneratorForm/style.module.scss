@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .passwordGeneratorForm {
   display: flex;
@@ -6,17 +7,30 @@
   background: #24232C;
   padding: 16px;
 
+  @include media(">tablet") {
+    padding: 24px 32px 32px;
+  }
+
   .rangeInputLabelWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7px;
 
+    @include media(">tablet") {
+      margin-bottom: 17px;
+    }
+
     .label {
       font-weight: 700;
       font-size: 16px;
       line-height: 21px;
       color: #E6E5EA;
+
+      @include media(">tablet") {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
 
     .value {
@@ -24,6 +38,11 @@
       font-size: 24px;
       line-height: 32px;
       color: #A4FFAF;
+
+      @include media(">tablet") {
+        font-size: 32px;
+        line-height: 42px;
+      }
     }
   }
 
@@ -31,6 +50,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include media(">tablet") {
+      gap: 20px;
+    }
   }
 
   .generateButton {
@@ -38,6 +61,10 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+
+    @include media(">tablet") {
+      gap: 24px;
+    }
 
     .rightArrowIcon {
       height: 12px;
@@ -48,5 +75,9 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include media(">tablet") {
+      gap: 32px;
+    }
   }
 }
