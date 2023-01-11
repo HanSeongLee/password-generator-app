@@ -1,57 +1,24 @@
-import React, { FormHTMLAttributes, useMemo } from 'react';
+import React, { FormHTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import Button from 'components/Button';
 import RightArrowIcon from '/public/icons/icon-arrow-right.svg';
 import RangeInput from 'components/RangeInput';
 import CheckBox from 'components/CheckBox';
 import Indicator from 'components/Indicator';
-import { UseFormRegister, UseFormWatch } from 'react-hook-form/dist/types/form';
+import { UseFormRegister } from 'react-hook-form/dist/types/form';
 import cn from 'classnames';
+import { Strength } from 'types/strength';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     register: UseFormRegister<any>;
-    watch: UseFormWatch<any>;
+    length: string | number;
+    currentStrength: Strength;
 }
 
-const PasswordGeneratorForm: React.FC<IProps> = ({ register, watch, className, ...props }) => {
-    const [
-        length, uppercase, lowercase, numbers,
-        symbols
-    ] = watch([
-        'length', 'uppercase', 'lowercase', 'numbers',
-        'symbols'
-    ]);
-
-    const currentStrength = useMemo(() => {
-        let strength = 0;
-
-        if (length === 0) {
-            return strength;
-        }
-
-        if (uppercase) {
-            strength++;
-        }
-        if (lowercase) {
-            strength++;
-        }
-        if (numbers) {
-            strength++;
-        }
-        if (symbols) {
-            strength++;
-        }
-
-        return length < 8 ?
-            Math.min(strength, 1) :
-            length < 12 ?
-                Math.min(strength, 2) :
-                strength;
-    }, [
-        length, uppercase, lowercase, numbers,
-        symbols
-    ]);
-
+const PasswordGeneratorForm: React.FC<IProps> = ({
+                                                     register, length, currentStrength, className,
+                                                     ...props
+                                                 }) => {
     return (
         <form className={cn(styles.passwordGeneratorForm, className)}
               {...props}

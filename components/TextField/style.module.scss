@@ -36,10 +36,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 16px;
     padding: 0 15.5px;
 
     @include media(">tablet") {
       padding: 0 32px;
+    }
+
+    .copiedText {
+      color: #A4FFAF;
+      text-transform: uppercase;
     }
 
     .copyButton {

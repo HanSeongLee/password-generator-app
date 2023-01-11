@@ -4,10 +4,11 @@ import cn from 'classnames';
 import CopyIcon from '/public/icons/icon-copy.svg';
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
+    copied: boolean;
     onCopy: () => void;
 }
 
-const TextField = React.forwardRef<HTMLInputElement, IProps>(({ onCopy, className, ...props }, ref) => {
+const TextField = React.forwardRef<HTMLInputElement, IProps>(({ copied, onCopy, className, ...props }, ref) => {
     return (
         <div className={cn(styles.inputWrapper, className)}>
             <input className={styles.input}
@@ -16,6 +17,11 @@ const TextField = React.forwardRef<HTMLInputElement, IProps>(({ onCopy, classNam
                    {...props}
             />
             <div className={styles.buttonContainer}>
+                {copied && (
+                    <span className={styles.copiedText}>
+                        Copied
+                    </span>
+                )}
                 <button className={styles.copyButton}
                         type={'button'}
                         onClick={onCopy}
