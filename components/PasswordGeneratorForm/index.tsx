@@ -1,7 +1,6 @@
 import React, { FormHTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import Button from 'components/Button';
-import RightArrowIcon from '/public/icons/icon-arrow-right.svg';
 import RangeInput from 'components/RangeInput';
 import CheckBox from 'components/CheckBox';
 import Indicator from 'components/Indicator';
@@ -65,8 +64,10 @@ const PasswordGeneratorForm: React.FC<IProps> = ({
 
             <div className={styles.footer}>
                 <Indicator strength={currentStrength} />
-                <Button className={styles.generateButton}>
-                    Generate <RightArrowIcon className={styles.rightArrowIcon} />
+                <Button className={styles.generateButton}
+                        icon={'right-arrow'}
+                >
+                    Generate
                 </Button>
             </div>
         </form>

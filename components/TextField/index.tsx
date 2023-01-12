@@ -35,4 +35,4 @@ const TextField = React.forwardRef<HTMLInputElement, IProps>(({ copied, onCopy, 
     );
 });
 
-export default TextField;
+export default React.memo(TextField);

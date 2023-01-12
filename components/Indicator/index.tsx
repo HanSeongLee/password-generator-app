@@ -40,4 +40,4 @@ Indicator.defaultProps = {
     strength: Strength.EMPTY,
 };
 
-export default Indicator;
+export default React.memo(Indicator);
