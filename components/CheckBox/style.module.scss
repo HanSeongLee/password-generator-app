@@ -1,11 +1,18 @@
-
 .checkboxWrapper {
+  width: fit-content;
   display: flex;
   align-items: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
   color: #E6E5EA;
+  cursor: pointer;
+
+  &:hover .input {
+    &:hover {
+      border-color: #A4FFAF;
+    }
+  }
 
   .input {
     margin-right: 20px;
@@ -14,12 +21,7 @@
     height: 20px;
     -webkit-appearance: none;
     border: 2px solid #E6E5EA;
-    cursor: pointer;
     transition: border-color 0.3s;
-
-    &:hover {
-      border-color: #A4FFAF;
-    }
 
     &:checked {
       background: #A4FFAF url("/icons/icon-check.svg") no-repeat 50%;
