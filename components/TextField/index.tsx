@@ -25,6 +25,7 @@ const TextField = React.forwardRef<HTMLInputElement, IProps>(({ copied, onCopy, 
                 <button className={styles.copyButton}
                         type={'button'}
                         onClick={onCopy}
+                        aria-label={'Copy'}
                 >
                     <CopyIcon className={styles.copyIcon}
                               alt={'Copy'}
