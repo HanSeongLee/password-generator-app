@@ -40,7 +40,7 @@
       background: transparent;
     }
 
-    &::-webkit-slider-thumb, &::-moz-range-thumb {
+    @mixin slider-thumb {
       width: 28px;
       height: 28px;
       -webkit-appearance: none;
@@ -53,6 +53,14 @@
         background: #18171F;
         border: 2px solid #A4FFAF;
       }
+    }
+
+    &::-webkit-slider-thumb {
+      @include slider-thumb;
+    }
+
+    &::-moz-range-thumb {
+      @include slider-thumb;
     }
   }
 }

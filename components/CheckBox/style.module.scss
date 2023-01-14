@@ -1,3 +1,5 @@
+@import "styles/utils";
+
 .checkboxWrapper {
   width: fit-content;
   display: flex;
@@ -7,6 +9,11 @@
   line-height: 21px;
   color: #E6E5EA;
   cursor: pointer;
+
+  @include media(">tablet") {
+    font-size: 18px;
+    line-height: 24px;
+  }
 
   &:hover .input {
     &:hover {
@@ -22,6 +29,10 @@
     -webkit-appearance: none;
     border: 2px solid #E6E5EA;
     transition: border-color 0.3s;
+
+    @include media(">tablet") {
+      margin-right: 24px;
+    }
 
     &:checked {
       background: #A4FFAF url("/icons/icon-check.svg") no-repeat 50%;
