@@ -40,7 +40,7 @@
       background: transparent;
     }
 
-    &::-webkit-slider-thumb {
+    &::-webkit-slider-thumb, &::-moz-range-thumb {
       width: 28px;
       height: 28px;
       -webkit-appearance: none;
